@@ -231,7 +231,7 @@ Returns the elasptime of the scan.
      print "\tZone Transfer:" . "\t";
      foreach ( @{ $zone_transfers->result } ) {
          if ($i->hostname eq $_->name_server ) {
-             if ($i_->bool == 1) {
+             if ($_->bool == 1) {
                 print "Enabled\n";
                 print "\n\tZone Trasfer Result:" . "\t";
                 print "\t\t" . $_->output  . "\n";
@@ -547,7 +547,7 @@ Here is an example of parsing an XML file using Fierce::Parser:
                 print "\tZone Transfer:" . "\t";
                 foreach ( @{ $zone_transfers->result } ) {
                     if ($i->hostname eq $_->name_server ) {
-                        if ($i_->bool == 1) {
+                        if ($_->bool == 1) {
                             print "Enabled\n";
                             print "\n\tZone Trasfer Result:" . "\t";
                             print "\t\t" . $_->output  . "\n";

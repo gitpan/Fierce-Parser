@@ -11,6 +11,7 @@ lib/Fierce/Parser/PTR.pm
 lib/Fierce/Parser/FindMXResult.pm
 lib/Fierce/Parser/RangeResult.pm
 lib/Fierce/Parser/ZoneTransferResult.pm
+lib/Fierce/Parser/Domain.pm
 lib/Fierce/Parser/Domain/ZoneTransfers.pm
 lib/Fierce/Parser/Domain/ARIN.pm
 lib/Fierce/Parser/Domain/BruteForce.pm
