@@ -1,0 +1,81 @@
+<fiercescan args=" -dns google.com -format xml" startscan="1235973102" startscanstr="Mon Mar  2 00:51:42 2009"> 
+<domainscan domain="google.com" startscan="1235973102" startscanstr="Mon Mar  2 00:51:42 2009">
+    <!--  Name Servers -->
+    <nameservers starttime="1235973102" starttimestr="Mon Mar  2 00:51:42 2009" endtime="1235973103" endtimestr="Mon Mar  2 00:51:43 2009" elasptime="1">
+            <node ip="216.239.36.10" hostname="ns3.google.com"/>
+            <node ip="216.239.32.10" hostname="ns1.google.com"/>
+            <node ip="216.239.34.10" hostname="ns2.google.com"/>
+            <node ip="216.239.38.10" hostname="ns4.google.com"/>
+    </nameservers>
+
+    <zonetransfers starttime="1235973103" starttimestr="Mon Mar  2 00:51:43 2009" endtime="1235973103" endtimestr="Mon Mar  2 00:51:43 2009" elasptime="0">
+    </zonetransfers>
+
+    <!--  Prefix Brute Force DNS -->
+    <bruteforce starttime="1235973103" starttimestr="Mon Mar  2 00:51:43 2009" endtime="1235973107" endtimestr="Mon Mar  2 00:51:47 2009" elasptime="4">
+               <node ip="66.102.1.104" hostname="www.google.com"/>
+               <node ip="64.233.179.104" hostname="www2.google.com"/>
+               <node ip="64.233.179.104" hostname="www3.google.com"/>
+               <node ip="66.102.1.118" hostname="www4.google.com"/>
+               <node ip="64.233.161.147" hostname="www5.google.com"/>
+               <node ip="66.102.1.147" hostname="www6.google.com"/>
+               <node ip="64.233.161.99" hostname="www9.google.com"/>
+               <node ip="203.208.35.118" hostname="www10.google.com"/>
+               <node ip="72.14.247.19" hostname="mail.google.com"/>
+               <node ip="209.85.237.25" hostname="smtp.google.com"/>
+               <node ip="216.239.32.10" hostname="ns.google.com"/>
+               <node ip="64.9.224.70" hostname="vpn.google.com"/>
+    </bruteforce>
+
+    <!--  Extension Brute Force DNS -->
+    <extbruteforce starttime="1235973107" starttimestr="Mon Mar  2 00:51:47 2009" endtime="1235973107" endtimestr="Mon Mar  2 00:51:47 2009" elasptime="0">
+               <node ip="209.85.171.100" hostname="google.com"/>
+               <node ip="64.233.161.99" hostname="google.net"/>
+               <node ip="66.249.93.104" hostname="google.org"/>
+               <node ip="66.249.93.104" hostname="google.co.uk"/>
+               <node ip="72.14.221.104" hostname="google.de"/>
+               <node ip="64.233.161.104" hostname="google.info"/>
+               <node ip="66.249.93.104" hostname="google.tv"/>
+               <node ip="64.233.161.104" hostname="google.biz"/>
+               <node ip="64.233.161.104" hostname="google.cc"/>
+               <node ip="209.85.133.160" hostname="google.cn"/>
+               <node ip="193.109.220.143" hostname="google.name"/>
+               <node ip="74.125.91.104" hostname="google.pro"/>
+               <node ip="74.125.91.104" hostname="google.us"/>
+               <node ip="64.233.161.104" hostname="google.la"/>
+    </extbruteforce>
+
+    <!--  Find MX Record-->
+    <findmx starttime="1235973107" starttimestr="Mon Mar  2 00:51:47 2009" endtime="1235973107" endtimestr="Mon Mar  2 00:51:47 2009" elasptime="0">
+            <mx preference="10" exchange="smtp3.google.com"/>
+            <mx preference="10" exchange="smtp4.google.com"/>
+            <mx preference="10" exchange="smtp1.google.com"/>
+            <mx preference="10" exchange="smtp2.google.com"/>
+    </findmx>
+
+
+    <!--  Check for Wildcard -->
+    <wildcard starttime="1235973110" starttimestr="Mon Mar  2 00:51:50 2009" endtime="1235973110" endtimestr="Mon Mar  2 00:51:50 2009" elasptime="0">
+    </wildcard>
+
+    <!--  Whois -->
+    <whois starttime="1235973107" starttimestr="Mon Mar  2 00:51:47 2009" endtime="1235973110" endtimestr="Mon Mar  2 00:51:50 2009" elasptime="3">
+               <range iprange="63.146.123.0 - 63.146.123.31" cidr="63.146.123.0/27" nethandle="NET-63-146-123-0-1"/>
+               <range iprange="63.236.5.128 - 63.236.5.159" cidr="63.236.5.128/27" nethandle="NET-63-236-5-128-1"/>
+               <range iprange="66.77.90.48 - 66.77.90.63" cidr="66.77.90.48/28" nethandle="NET-66-77-90-48-1"/>
+               <range iprange="63.236.5.224 - 63.236.5.239" cidr="63.236.5.224/28" nethandle="NET-63-236-5-224-1"/>
+    </whois>
+
+     <!--  Reverse Lookup -->
+    <reverselookup starttime="1235973110" starttimestr="Mon Mar  2 00:51:50 2009" endtime="1235973110" endtimestr="Mon Mar  2 00:51:50 2009" elasptime="0">
+               <node ip="74.125.45.100" hostname="google.com"/>
+               <node ip="74.125.67.100" hostname="google.com"/>
+               <node ip="209.85.171.100" hostname="google.com"/>
+    </reverselookup>
+
+
+<endtimedetails endtime="1235973110" endtimestr="Mon Mar  2 00:51:42 2009" elasptime="8"/>
+</domainscan>
+
+<endscan endtime="1235973110" endtimestr="Mon Mar  2 00:51:50 2009" elasptime="8"/>
+</fiercescan>

@@ -1,0 +1,195 @@
+<fiercescan args=" -verbose 1 -dns google.com,yahoo.com -format xml -no subbf -output google-yahoo.xml" startscan="1242756982" startscanstr="Tue May 19 14:16:22 2009"> 
+<domainscan domain="google.com" startscan="1242756982" startscanstr="Tue May 19 14:16:22 2009">
+
+    <!--  Name Servers -->
+    <nameservers starttime="1242756982" starttimestr="Tue May 19 14:16:22 2009" endtime="1242756982" endtimestr="Tue May 19 14:16:22 2009" elasptime="0">
+            <node ip="216.239.36.10" hostname="ns3.google.com"/>
+            <node ip="216.239.38.10" hostname="ns4.google.com"/>
+            <node ip="216.239.34.10" hostname="ns2.google.com"/>
+            <node ip="216.239.32.10" hostname="ns1.google.com"/>
+    </nameservers>
+    <zonetransfers starttime="1242756982" starttimestr="Tue May 19 14:16:22 2009" endtime="1242756982" endtimestr="Tue May 19 14:16:22 2009" elasptime="0">
+    </zonetransfers>
+    <!--  Prefix Brute Force DNS -->
+    <bruteforce starttime="1242756982" starttimestr="Tue May 19 14:16:22 2009" endtime="1242756985" endtimestr="Tue May 19 14:16:25 2009" elasptime="3">
+               <node ip="66.102.1.104" hostname="www.google.com"/>
+               <node ip="209.85.133.83" hostname="mail.google.com"/>
+               <node ip="64.233.179.104" hostname="www2.google.com"/>
+               <node ip="64.233.179.104" hostname="www3.google.com"/>
+               <node ip="74.125.91.133" hostname="www4.google.com"/>
+               <node ip="66.102.1.104" hostname="www5.google.com"/>
+               <node ip="66.102.1.104" hostname="www6.google.com"/>
+               <node ip="66.102.1.147" hostname="www9.google.com"/>
+               <node ip="74.125.91.133" hostname="www10.google.com"/>
+               <node ip="216.239.32.10" hostname="ns.google.com"/>
+               <node ip="209.85.237.25" hostname="smtp.google.com"/>
+               <node ip="64.9.224.69" hostname="vpn.google.com"/>
+               <node ip="216.239.34.10" hostname="ns2.google.com"/>
+               <node ip="216.239.36.10" hostname="ns3.google.com"/>
+               <node ip="216.239.38.10" hostname="ns4.google.com"/>
+               <node ip="64.233.165.25" hostname="smtp2.google.com"/>
+               <node ip="209.85.137.25" hostname="smtp3.google.com"/>
+               <node ip="72.14.221.25" hostname="smtp4.google.com"/>
+    </bruteforce>
+    <!--  Extension Brute Force DNS -->
+    <extbruteforce starttime="1242756985" starttimestr="Tue May 19 14:16:25 2009" endtime="1242756989" endtimestr="Tue May 19 14:16:29 2009" elasptime="4">
+               <node ip="209.85.171.100" hostname="google.com"/>
+               <node ip="64.233.161.99" hostname="google.net"/>
+               <node ip="74.125.91.104" hostname="google.org"/>
+               <node ip="72.14.221.104" hostname="google.co.uk"/>
+               <node ip="72.14.221.104" hostname="google.de"/>
+               <node ip="74.125.91.104" hostname="google.info"/>
+               <node ip="74.125.77.104" hostname="google.tv"/>
+               <node ip="74.125.91.104" hostname="google.biz"/>
+               <node ip="64.233.161.104" hostname="google.cc"/>
+               <node ip="209.85.133.160" hostname="google.cn"/>
+               <node ip="74.125.91.104" hostname="google.pro"/>
+               <node ip="64.233.161.104" hostname="google.us"/>
+               <node ip="74.125.77.104" hostname="google.la"/>
+    </extbruteforce>
+    <!--  Vhosts -->
+    <vhost starttime="1242756989" starttimestr="Tue May 19 14:16:29 2009" endtime="1242756994" endtimestr="Tue May 19 14:16:34 2009" elasptime="5">
+               <node ip="74.125.91.113" hostname="code.google.com"/>
+               <node ip="74.125.67.100" hostname="688268.com"/>
+               <node ip="209.85.171.100" hostname="vukovar.wa-portal.com"/>
+               <node ip="74.125.93.100" hostname="www.openhandsetalliance.com"/>
+               <node ip="74.125.67.100" hostname="go.ogle.org"/>
+               <node ip="74.125.91.101" hostname="video.google.com"/>
+               <node ip="74.125.45.100" hostname="start.bimas.pl"/>
+               <node ip="209.85.171.100" hostname="google.com"/>
+               <node ip="74.125.91.101" hostname="www.panoramio.com"/>
+               <node ip="89.149.169.41" hostname="www.microsofttranslator.com"/>
+               <node ip="74.125.91.100" hostname="www.deja.com"/>
+               <node ip="74.125.67.100" hostname="www.crj.com.tw"/>
+               <node ip="74.125.91.101" hostname="groups.google.com"/>
+               <node ip="74.125.93.102" hostname="www.youtube.com"/>
+    </vhost>
+    <!--  Find MX Record-->
+    <findmx starttime="1242756994" starttimestr="Tue May 19 14:16:34 2009" endtime="1242756994" endtimestr="Tue May 19 14:16:34 2009" elasptime="0">
+            <mx preference="10" exchange="smtp4.google.com"/>
+            <mx preference="10" exchange="smtp1.google.com"/>
+            <mx preference="10" exchange="smtp2.google.com"/>
+            <mx preference="10" exchange="smtp3.google.com"/>
+    </findmx>
+
+    <!--  Whois -->
+    <whois starttime="1242756994" starttimestr="Tue May 19 14:16:34 2009" endtime="1242756994" endtimestr="Tue May 19 14:16:34 2009" elasptime="0">
+               <range iprange="undefined" cidr="undefined" nethandle="undefined"/>
+    </whois>
+    <!--  Check for Wildcard -->
+    <wildcard starttime="1242756994" starttimestr="Tue May 19 14:16:34 2009" endtime="1242756998" endtimestr="Tue May 19 14:16:38 2009" elasptime="4">
+    </wildcard>
+     <!--  Reverse Lookup -->
+    <reverselookup starttime="1242756998" starttimestr="Tue May 19 14:16:38 2009" endtime="1242756998" endtimestr="Tue May 19 14:16:38 2009" elasptime="0">
+               <node ip="74.125.45.100" hostname="google.com"/>
+               <node ip="74.125.67.100" hostname="google.com"/>
+               <node ip="209.85.171.100" hostname="google.com"/>
+    </reverselookup>
+
+<endtimedetails endtime="1242756998" endtimestr="Tue May 19 14:16:22 2009" elasptime="16"/>
+</domainscan>
+
+<domainscan domain="yahoo.com" startscan="1242756998" startscanstr="Tue May 19 14:16:38 2009">
+
+    <!--  Name Servers -->
+    <nameservers starttime="1242756998" starttimestr="Tue May 19 14:16:38 2009" endtime="1242756998" endtimestr="Tue May 19 14:16:38 2009" elasptime="0">
+            <node ip="68.180.131.16" hostname="ns1.yahoo.com"/>
+            <node ip="68.142.255.16" hostname="ns2.yahoo.com"/>
+            <node ip="121.101.152.99" hostname="ns3.yahoo.com"/>
+            <node ip="68.142.196.63" hostname="ns4.yahoo.com"/>
+            <node ip="119.160.247.124" hostname="ns5.yahoo.com"/>
+    </nameservers>
+    <zonetransfers starttime="1242756998" starttimestr="Tue May 19 14:16:38 2009" endtime="1242756998" endtimestr="Tue May 19 14:16:38 2009" elasptime="0">
+    </zonetransfers>
+    <!--  Prefix Brute Force DNS -->
+    <bruteforce starttime="1242756998" starttimestr="Tue May 19 14:16:38 2009" endtime="1242757003" endtimestr="Tue May 19 14:16:43 2009" elasptime="5">
+               <node ip="69.147.76.15" hostname="www.yahoo.com"/>
+               <node ip="69.147.112.160" hostname="mail.yahoo.com"/>
+               <node ip="206.190.60.37" hostname="www2.yahoo.com"/>
+               <node ip="206.190.60.37" hostname="www3.yahoo.com"/>
+               <node ip="68.142.196.63" hostname="dns.yahoo.com"/>
+               <node ip="206.190.60.37" hostname="www4.yahoo.com"/>
+               <node ip="206.190.60.37" hostname="www5.yahoo.com"/>
+               <node ip="206.190.60.37" hostname="www6.yahoo.com"/>
+               <node ip="206.190.60.37" hostname="www7.yahoo.com"/>
+               <node ip="66.218.71.63" hostname="ns.yahoo.com"/>
+               <node ip="209.191.90.107" hostname="mail2.yahoo.com"/>
+               <node ip="209.191.90.107" hostname="mail3.yahoo.com"/>
+               <node ip="206.190.60.37" hostname="www8.yahoo.com"/>
+               <node ip="206.190.60.37" hostname="www9.yahoo.com"/>
+               <node ip="206.190.60.37" hostname="www10.yahoo.com"/>
+               <node ip="206.190.60.37" hostname="www11.yahoo.com"/>
+               <node ip="69.147.107.20" hostname="smtp.yahoo.com"/>
+               <node ip="255.2.0.0" hostname="www12.yahoo.com"/>
+               <node ip="68.142.255.16" hostname="ns2.yahoo.com"/>
+               <node ip="121.101.152.99" hostname="ns3.yahoo.com"/>
+               <node ip="207.126.232.181" hostname="devel.yahoo.com"/>
+               <node ip="206.190.60.37" hostname="www13.yahoo.com"/>
+               <node ip="68.142.226.230" hostname="mx.yahoo.com"/>
+               <node ip="68.142.196.63" hostname="ns4.yahoo.com"/>
+               <node ip="206.190.60.37" hostname="www14.yahoo.com"/>
+               <node ip="206.190.60.37" hostname="www15.yahoo.com"/>
+               <node ip="119.160.247.124" hostname="ns5.yahoo.com"/>
+               <node ip="206.190.60.37" hostname="www16.yahoo.com"/>
+               <node ip="202.43.223.170" hostname="ns6.yahoo.com"/>
+               <node ip="68.142.226.82" hostname="ns7.yahoo.com"/>
+               <node ip="202.165.104.22" hostname="ns8.yahoo.com"/>
+               <node ip="202.160.176.146" hostname="ns9.yahoo.com"/>
+               <node ip="69.147.114.29" hostname="ns13.yahoo.com"/>
+               <node ip="216.252.122.25" hostname="ns14.yahoo.com"/>
+    </bruteforce>
+    <!--  Extension Brute Force DNS -->
+    <extbruteforce starttime="1242757003" starttimestr="Tue May 19 14:16:43 2009" endtime="1242757008" endtimestr="Tue May 19 14:16:48 2009" elasptime="5">
+               <node ip="69.147.114.224" hostname="yahoo.com"/>
+               <node ip="68.180.206.184" hostname="yahoo.net"/>
+               <node ip="206.190.60.37" hostname="yahoo.org"/>
+               <node ip="217.146.186.221" hostname="yahoo.co.uk"/>
+               <node ip="217.146.186.221" hostname="yahoo.de"/>
+               <node ip="206.190.60.37" hostname="yahoo.info"/>
+               <node ip="206.190.60.37" hostname="yahoo.tv"/>
+               <node ip="206.190.60.37" hostname="yahoo.biz"/>
+               <node ip="206.190.60.37" hostname="yahoo.cc"/>
+               <node ip="203.209.253.250" hostname="yahoo.cn"/>
+               <node ip="68.180.206.184" hostname="yahoo.us"/>
+               <node ip="68.180.206.184" hostname="yahoo.la"/>
+    </extbruteforce>
+    <!--  Vhosts -->
+    <vhost starttime="1242757008" starttimestr="Tue May 19 14:16:48 2009" endtime="1242757013" endtimestr="Tue May 19 14:16:53 2009" elasptime="5">
+               <node ip="216.239.36.21" hostname="jmail5.com"/>
+               <node ip="69.147.114.224" hostname="beta.yahoo.com"/>
+               <node ip="69.147.114.224" hostname="p.www.yahoo.com"/>
+               <node ip="69.147.114.224" hostname="www.yahooinc.com"/>
+               <node ip="209.131.36.159" hostname="www.ronfamily.com"/>
+               <node ip="209.191.93.53" hostname="yahoo.com"/>
+               <node ip="69.147.114.224" hostname="www.yahoo-inc.com"/>
+    </vhost>
+    <!--  Find MX Record-->
+    <findmx starttime="1242757013" starttimestr="Tue May 19 14:16:53 2009" endtime="1242757013" endtimestr="Tue May 19 14:16:53 2009" elasptime="0">
+            <mx preference="1" exchange="d.mx.mail.yahoo.com"/>
+            <mx preference="1" exchange="e.mx.mail.yahoo.com"/>
+            <mx preference="1" exchange="f.mx.mail.yahoo.com"/>
+            <mx preference="1" exchange="g.mx.mail.yahoo.com"/>
+            <mx preference="1" exchange="a.mx.mail.yahoo.com"/>
+            <mx preference="1" exchange="b.mx.mail.yahoo.com"/>
+            <mx preference="1" exchange="c.mx.mail.yahoo.com"/>
+    </findmx>
+
+    <!--  Whois -->
+    <whois starttime="1242757013" starttimestr="Tue May 19 14:16:53 2009" endtime="1242757013" endtimestr="Tue May 19 14:16:53 2009" elasptime="0">
+               <range iprange="undefined" cidr="undefined" nethandle="undefined"/>
+    </whois>
+    <!--  Check for Wildcard -->
+    <wildcard starttime="1242757013" starttimestr="Tue May 19 14:16:53 2009" endtime="1242757016" endtimestr="Tue May 19 14:16:56 2009" elasptime="3">
+    </wildcard>
+     <!--  Reverse Lookup -->
+    <reverselookup starttime="1242757016" starttimestr="Tue May 19 14:16:56 2009" endtime="1242757016" endtimestr="Tue May 19 14:16:56 2009" elasptime="0">
+               <node ip="69.147.114.224" hostname="yahoo.com"/>
+               <node ip="209.131.36.159" hostname="yahoo.com"/>
+               <node ip="209.191.93.53" hostname="yahoo.com"/>
+    </reverselookup>
+
+<endtimedetails endtime="1242757016" endtimestr="Tue May 19 14:16:22 2009" elasptime="18"/>
+</domainscan>
+
+<endscan endtime="1242757016" endtimestr="Tue May 19 14:16:56 2009" elasptime="34"/>
+</fiercescan>
