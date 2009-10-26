@@ -23,6 +23,7 @@ lib/Fierce/Parser/Domain/WildCard.pm
 lib/Fierce/Parser/Domain/NameServers.pm
 lib/Fierce/Parser/Domain/ReverseLookups.pm
 lib/Fierce/Parser/Domain/FindNearby.pm
+lib/Fierce/Parser/Domain/SubdomainBruteForce.pm
 examples/test1.xml
 examples/domain.pl
 examples/get_all_nodes.pl

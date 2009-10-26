@@ -1,6 +1,6 @@
 --- #YAML:1.0
 name:               Fierce-Parser
-version:            0.02
+version:            0.03
 abstract:           Parse fierce scan data with Perl
 author:
     - Joshua D. Abraham < jabra@spl0it.org >

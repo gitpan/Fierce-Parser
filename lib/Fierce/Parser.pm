@@ -1,7 +1,7 @@
-# $Id: Parser.pm 220 2009-10-25 03:48:36Z jabra $
+# $Id: Parser.pm 222 2009-10-26 16:10:30Z jabra $
 package Fierce::Parser;
 {
-    our $VERSION = '0.02';
+    our $VERSION = '0.03';
     $VERSION = eval $VERSION;
 
     use Object::InsideOut;

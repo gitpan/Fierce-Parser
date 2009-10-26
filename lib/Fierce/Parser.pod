@@ -6,7 +6,7 @@ Fierce::Parser - Parse fierce scan data with Perl
 
 =head1 VERSION
 
-This document describes Fierce::Parser version 0.01
+This document describes the latest version of Fierce::Parser
 
 =head1 SYNOPSIS
 
