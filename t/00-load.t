@@ -1,6 +1,6 @@
 #!perl -T
 
-use Test::More tests => 21;
+use Test::More tests => 20;
 
 
 BEGIN {
@@ -8,7 +8,6 @@ BEGIN {
     use_ok( 'Fierce::Parser::Session') ;
     use_ok( 'Fierce::Parser::Node');
     use_ok( 'Fierce::Parser::DomainScanDetails');
-    use_ok( 'Fierce::Parser::Arin');
     use_ok( 'Fierce::Parser::PTR');
     use_ok( 'Fierce::Parser::FindMXResult');
     use_ok( 'Fierce::Parser::RangeResult');
