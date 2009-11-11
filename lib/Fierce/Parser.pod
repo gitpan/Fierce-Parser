@@ -68,6 +68,17 @@ Parse a fierce XML file. The XML files are generated from using the following co
  
  fierce.pl -dns $DOMAIN -format xml -output domain.xml
 
+=item B<parse_file($args,@domains)>
+
+Perform a fierce scan and parse the XML result.
+
+ use Fierce::Parser;
+ my $fp = new Fierce::Parser;
+ my @domains;
+ push(@domains,"google.com");
+ 
+ my $parser = $fp->parse_scan("",@domains);
+
 =item B<get_session()>
 
 Obtain the fierce::Parser::Session object which contains the session scan information.

@@ -25,5 +25,3 @@ BEGIN {
     use_ok( 'Fierce::Parser::Domain::FindNearby');
     use_ok( 'Fierce::Parser::Domain::SubdomainBruteForce');
 }
-
-diag( "Testing Test::Class::Load $Test::Class::Load::VERSION, Perl $], $^X" );

@@ -1,7 +1,7 @@
-# $Id: Parser.pm 222 2009-10-26 16:10:30Z jabra $
+# $Id: Parser.pm 266 2009-11-11 02:39:30Z jabra $
 package Fierce::Parser;
 {
-    our $VERSION = '0.05';
+    our $VERSION = '0.06';
     $VERSION = eval $VERSION;
 
     use Object::InsideOut;
@@ -24,30 +24,23 @@ package Fierce::Parser;
         return Fierce::Parser->new( session => Fierce::Parser::Session->parse( $parser, $doc ) );
     }
 
-=begin
     sub parse_scan {
-        my ( $self, $fdir, $args, @domains ) = @_;
+        my ( $self, $args, @domains ) = @_;
         my $FH;
 
         if ( $args =~ /-format/i ) {
             die
-                "[Fierce::Parser] Cannot pass option '-Format ' to parse_scan()";
+                "[Fierce::Parser] Cannot pass option '-format ' to parse_scan()";
         }
 
         if ( $args =~ /-output/i ) {
             die
                 "[Fierce::Parser] Cannot pass option '-output ' to parse_scan()";
         }
-        if (-d $ndir) {
-            chdir $ndir or die "[Fierce::Parser] $ndir not a directory\n";
-        }
-        else {
-            die "[Fierce::Parser] $fdir not a directory\n";
-        }
 
         my $cmd
-            = "./fierce.pl -Format xml -output \"-\" -dns " . ( join ' ', @domains );
-        print "$cmd\n";
+            = "fierce -format xml $args -dns " . ( join ',', @domains );
+        #print "$cmd\n";
         open $FH, "$cmd |"
             || die "[Fierce::Parser] Could not perform nikto scan - $!";
         my $p   = XML::LibXML->new();
@@ -57,8 +50,6 @@ package Fierce::Parser;
         close $FH;
         return $parser;
     }
-=end
-=cut
 
     sub get_session {
         my ($self) = @_;
@@ -75,7 +66,6 @@ package Fierce::Parser;
         my @all_hosts = $self->session->domainscandetails->all_hosts();
         return @all_hosts;
     }
-
 }
 1;
 
