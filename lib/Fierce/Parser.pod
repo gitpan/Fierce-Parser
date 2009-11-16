@@ -119,9 +119,9 @@ Returns the end time of the scan in unixtime format.
 
 Returns the end time of the scan in a readable string.
 
-=item B<elasptime()>
+=item B<elapsedtime()>
 
-Returns the elasptime of the scan.
+Returns the elapsed time of the scan.
 
 =item B<fversion()>
 
@@ -141,7 +141,7 @@ This object contains the information for a domain.
 
 =item B<domain()>
 
-returns the domain name.
+Returns the domain name.
 
 =back
 
@@ -155,11 +155,43 @@ Fierce modules use a Node to represent the a device.
 
 =item B<ip()>
 
-returns the ip address of the node.
+Returns the ip address of the node.
 
 =item B<hostname()>
 
-returns the hostname of the node.
+Returns the hostname of the node.
+
+=item B<type()>
+
+Return the type of the node.
+
+=back
+
+=head2 Fierce::Parser::ZoneTransferResult
+
+This Object contains the information for a zone transfer request.
+
+=over 4
+
+=item B<domain>
+
+Returns the domain being tested.
+
+=item B<name_server>
+
+Returns the name_server being tested.
+
+=item B<bool>
+
+Returns 1 or 0 if a zone transfer exists. 1=true and 0=false. 
+
+=item B<raw_output>
+
+Returns the raw output of a axfr request.
+
+=item B<nodes>
+
+Returns an ArrayRef containing Node Objects.
 
 =back 
 
@@ -171,7 +203,7 @@ This object contains the Nameserver Information about the Domain.
 
 =item B<startscan()>
 
-returns the start time of the scan in unixtime format.
+Returns the start time of the scan in unixtime format.
 
 =item B<startscanstr()>
 
@@ -185,13 +217,13 @@ Returns the end time of the scan in unixtime format.
 
 Returns the end time of the scan in a readable string.
 
-=item B<elasptime()>
+=item B<elapsedtime()>
 
-returns the elasptime of the scan.
+Returns the elapsed time of the scan.
 
 =item B<nodes()>
 
-returns an Arrayref to a list of Node Objects.
+Returns an Arrayref containing Node Objects.
 
 =back
 
@@ -226,9 +258,13 @@ Returns the end time of the scan in unixtime format.
 
 Returns the end time of the scan in a readable string.
 
-=item B<elasptime()>
+=item B<elapsedtime()>
 
-Returns the elasptime of the scan.
+Returns the elapsed time of the scan.
+
+=item B<result()>
+
+Returns an ArrayRef containing ZoneTransferResult objects.
 
 =back
 
@@ -245,7 +281,7 @@ Returns the elasptime of the scan.
              if ($_->bool == 1) {
                 print "Enabled\n";
                 print "\n\tZone Trasfer Result:" . "\t";
-                print "\t\t" . $_->output  . "\n";
+                print "\t\t" . $_->raw_output  . "\n";
              }
              else {
                  print "Disabled\n";
@@ -276,13 +312,13 @@ Returns the end time of the scan in unixtime format.
 
 Returns the end time of the scan in a readable string.
 
-=item B<elasptime()>
+=item B<elapsedtime()>
 
-Returns the elasptime of the scan.
+Returns the elapsed time of the scan.
 
 =item B<nodes()>
 
-returns an arrayref to a list of node objects.
+Returns an ArrayRef containing Node objects.
 
 =back
 
@@ -303,27 +339,27 @@ This object contains the Nodes found using Extension Bruteforce.
 
 =item B<startscan()>
 
-returns the start time of the scan in unixtime format.
+Returns the start time of the scan in unixtime format.
 
 =item B<startscanstr()>
 
-returns the start time of the scan in a readable string.
+Returns the start time of the scan in a readable string.
 
 =item B<endscan()>
 
-returns the end time of the scan in unixtime format.
+Returns the end time of the scan in unixtime format.
 
 =item B<endscanstr()>
 
-returns the end time of the scan in a readable string.
+Returns the end time of the scan in a readable string.
 
-=item B<elasptime()>
+=item B<elapsedtime()>
 
-returns the elasptime of the scan.
+Returns the elapsed time of the scan.
 
 =item B<nodes()>
 
-returns an arrayref to a list of node objects.
+Returns an ArrayRef containing Node objects.
 
 =back
 
@@ -358,13 +394,13 @@ Returns the end time of the scan in unixtime format.
 
 Returns the end time of the scan in a readable string.
 
-=item B<elasptime()>
+=item B<elapsedtime()>
 
-Returns the elasptime of the scan.
+Returns the elapsed time of the scan.
 
 =item B<nodes()>
 
-returns an ArrayRef to a list of Node Objects.
+Returns an ArrayRef containing Node Objects.
 
 =back
 
@@ -399,9 +435,9 @@ Returns the end time of the scan in unixtime format.
 
 Returns the end time of the scan in a readable string.
 
-=item B<elasptime()>
+=item B<elapsedtime()>
 
-Returns the elasptime of the scan.
+Returns the elapsed time of the scan.
 
 =back 
 
@@ -427,9 +463,9 @@ Returns the end time of the scan in unixtime format.
 
 Returns the end time of the scan in a readable string.
 
-=item B<elasptime()>
+=item B<elapsedtime()>
 
-Returns the elasptime of the scan.
+Returns the elapsed time of the scan.
 
 =back
 
@@ -466,9 +502,9 @@ Returns the end time of the scan in unixtime format.
 
 Returns the end time of the scan in a readable string.
 
-=item B<elasptime()>
+=item B<elapsedtime()>
 
-Returns the elasptime of the scan.
+Returns the elapsed time of the scan.
 
 =back
 
@@ -504,13 +540,13 @@ Returns the end time of the scan in unixtime format.
 
 Returns the end time of the scan in a readable string.
 
-=item B<elasptime()>
+=item B<elapsedtime()>
 
-Returns the elasptime of the scan.
+Returns the elapsed time of the scan.
 
 =item B<nodes()>
 
-returns an ArrayRef to a list of Node Objects.
+Returns an ArrayRef containing Node Objects.
 
 =back
 
@@ -561,7 +597,7 @@ Here is an example of parsing an XML file using Fierce::Parser:
                         if ($_->bool == 1) {
                             print "Enabled\n";
                             print "\n\tZone Trasfer Result:" . "\t";
-                            print "\t\t" . $_->output  . "\n";
+                            print "\t\t" . $_->raw_output  . "\n";
                         }
                         else {
                             print "Disabled\n";

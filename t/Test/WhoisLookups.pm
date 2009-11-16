@@ -1,5 +1,5 @@
 #!/usr/bin/perl
-# $Id: WhoisLookups.pm 14 2009-03-02 01:04:45Z jabra $
+# $Id: WhoisLookups.pm 297 2009-11-16 04:37:07Z jabra $
 package t::Test::WhoisLookups;
 
 use base 't::Test';
@@ -20,6 +20,6 @@ sub fields : Tests {
     is ( $whois->starttimestr, '', 'startscanstr');
     is ( $whois->endtime, '', 'endscan');
     is ( $whois->endtimestr, '', 'endscanstr');
-    is ( $whois->elasptime, '', 'elasp');
+    is ( $whois->elapsedtime, '', 'elasp');
 }
 1;

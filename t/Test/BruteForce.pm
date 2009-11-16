@@ -1,5 +1,5 @@
 #!/usr/bin/perl
-# $Id: BruteForce.pm 218 2009-10-25 01:10:43Z jabra $
+# $Id: BruteForce.pm 297 2009-11-16 04:37:07Z jabra $
 package t::Test::BruteForce;
 
 use base 't::Test';
@@ -19,7 +19,7 @@ sub fields : Tests {
     is ( $bf->starttimestr, 'Wed Sep  3 22:10:03 2008', 'startscanstr');
     is ( $bf->endtime, '1220494203', 'endscan');
     is ( $bf->endtimestr, 'Wed Sep  3 22:10:03 2008', 'endscanstr');
-    is ( $bf->elasptime, '0', 'elasp');
+    is ( $bf->elapsedtime, '0', 'elasp');
 
     my $session2 = $self->{parser2}->get_session();
     

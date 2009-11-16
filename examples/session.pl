@@ -1,5 +1,5 @@
 #!/usr/bin/perl -w
-# $Id: session.pl 32 2009-03-02 06:02:26Z jabra $ 
+# $Id: session.pl 295 2009-11-16 04:35:00Z jabra $ 
 #  
 # Session example script
 #
@@ -28,7 +28,7 @@ if (defined($ARGV[0])){
     print "Stop Scan in unixtime:\t\t" . $session->endscan . "\n";
     print "Stop Scan:\t\t\t" . $session->endscanstr . "\n";
 
-    print "Elasp Time:\t\t\t" . $session->elasptime . "\n";
+    print "Elasp Time:\t\t\t" . $session->elapsedtime . "\n";
 }
 else {
     print "Usage: $0 [fierce-xml]\n";

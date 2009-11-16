@@ -1,5 +1,5 @@
 #!/usr/bin/perl
-# $Id: Parser.pm 210 2009-10-24 20:46:23Z jabra $
+# $Id: Parser.pm 297 2009-11-16 04:37:07Z jabra $
 package t::Test::Parser;
 
 use base 't::Test';
@@ -16,7 +16,7 @@ sub fields : Tests {
 
     is ( $session1->endscan, '1220494203', 'endscan');
     is ( $session1->endscanstr, 'Wed Sep  3 22:10:03 2008', 'endscanstr');
-    is ( $session1->elasptime, '0', 'elasptime');
+    is ( $session1->elapsedtime, '0', 'elapsedtime');
     is ( $session1->fversion, '2.0', 'fversion');
     is ( $session1->xmlversion, '1.0', 'xmlversion');
     

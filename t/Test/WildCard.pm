@@ -1,5 +1,5 @@
 #!/usr/bin/perl
-# $Id: WildCard.pm 14 2009-03-02 01:04:45Z jabra $
+# $Id: WildCard.pm 297 2009-11-16 04:37:07Z jabra $
 package t::Test::WildCard;
 
 use base 't::Test';
@@ -20,7 +20,7 @@ sub fields : Tests {
     is ( $wc->starttimestr, 'Wed Sep  3 22:10:03 2008', 'startscawctr');
     is ( $wc->endtime, '1220494203', 'endscan');
     is ( $wc->endtimestr, 'Wed Sep  3 22:10:03 2008', 'endscawctr');
-    is ( $wc->elasptime, '0', 'elasp');
+    is ( $wc->elapsedtime, '0', 'elasp');
 
     my $session2 = $self->{parser2}->get_session();
 

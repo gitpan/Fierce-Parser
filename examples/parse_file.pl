@@ -33,10 +33,19 @@ if (defined($ARGV[0])){
                 print "\tHostname:" . "\t" . $i->hostname . "\n";
                 print "\tIP:" . "\t\t" . $i->ip . "\n";
                 print "\tZone Transfer:" . "\t";
-                foreach ( @{ $zone_transfers->result } ) {
-                    if ($i->hostname eq $_->name_server ) {
-                        if ($_->bool == 1) {
+                my ($zt_status,$zt_output);
+                foreach my $zt ( @{ $zone_transfers->result } ) {
+                    if ( $i->hostname eq $zt->name_server ) { 
+                        if ( $zt->bool == 1 ) {
+                            $zt_status = 1;
                             print "Enabled\n";
+                            print "\tFound Nodes:\n";
+                            foreach my $n ( @{ $zt->nodes } ) {
+                                print "\t\t\tIP:\t\t" . $n->ip . "\n";
+                                print "\t\t\tHostname:\t" . $n->hostname . "\n";
+                                print "\t\t\tType:\t\t" . $n->type . "\n";
+                                print "\t\t\tTTL:\t\t" . $n->ttl . "\n";
+                            }
                         }
                         else {
                             print "Disabled\n";

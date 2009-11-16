@@ -1,5 +1,5 @@
 #!/usr/bin/perl
-# $Id: ExtBruteForce.pm 218 2009-10-25 01:10:43Z jabra $
+# $Id: ExtBruteForce.pm 297 2009-11-16 04:37:07Z jabra $
 package t::Test::ExtBruteForce;
 
 use base 't::Test';
@@ -20,7 +20,7 @@ sub fields : Tests {
     is ( $extbf->starttimestr, 'Wed Sep  3 22:10:03 2008', 'startscanstr');
     is ( $extbf->endtime, '1220494203', 'endscan');
     is ( $extbf->endtimestr, 'Wed Sep  3 22:10:03 2008', 'endscanstr');
-    is ( $extbf->elasptime, '0', 'elasp');
+    is ( $extbf->elapsedtime, '0', 'elasp');
 
     my $session2 = $self->{parser2}->get_session();
     $domainscandetails = $session2->domainscandetails;
@@ -32,7 +32,7 @@ sub fields : Tests {
     is ( $extbf->starttimestr, 'Mon Sep 15 21:27:24 2008', 'startscanstr');
     is ( $extbf->endtime, '1221528445', 'endscan');
     is ( $extbf->endtimestr, 'Mon Sep 15 21:27:25 2008', 'endscanstr');
-    is ( $extbf->elasptime, '1', 'elasp');
+    is ( $extbf->elapsedtime, '1', 'elasp');
     my @result = @{$extbf->nodes};
     my $node1 = $result[0];
     my $node2 = $result[1];

@@ -1,12 +1,13 @@
-# $Id: Parser.pm 266 2009-11-11 02:39:30Z jabra $
+# $Id: Parser.pm 294 2009-11-16 03:59:11Z jabra $
 package Fierce::Parser;
 {
-    our $VERSION = '0.06';
+    our $VERSION = '0.07';
     $VERSION = eval $VERSION;
 
     use Object::InsideOut;
     use Fierce::Parser::Session;
-    my @session : Field : Arg(session) : Get(session) : Type(Fierce::Parser::Session);
+    my @session : Field : Arg(session) : Get(session) :
+        Type(Fierce::Parser::Session);
 
     # parse_file
     #
@@ -21,7 +22,8 @@ package Fierce::Parser;
         my $parser = XML::LibXML->new();
 
         my $doc = $parser->parse_file($file);
-        return Fierce::Parser->new( session => Fierce::Parser::Session->parse( $parser, $doc ) );
+        return Fierce::Parser->new(
+            session => Fierce::Parser::Session->parse( $parser, $doc ) );
     }
 
     sub parse_scan {
@@ -38,15 +40,15 @@ package Fierce::Parser;
                 "[Fierce::Parser] Cannot pass option '-output ' to parse_scan()";
         }
 
-        my $cmd
-            = "fierce -format xml $args -dns " . ( join ',', @domains );
+        my $cmd = "fierce -format xml $args -dns " . ( join ',', @domains );
+
         #print "$cmd\n";
         open $FH, "$cmd |"
             || die "[Fierce::Parser] Could not perform nikto scan - $!";
-        my $p   = XML::LibXML->new();
-        my $doc = $p->parse_fh($FH);
-        my $parser
-            = Fierce::Parser->new( session => Fierce::Parser::Session->parse( $p, $doc ) );
+        my $p      = XML::LibXML->new();
+        my $doc    = $p->parse_fh($FH);
+        my $parser = Fierce::Parser->new(
+            session => Fierce::Parser::Session->parse( $p, $doc ) );
         close $FH;
         return $parser;
     }
@@ -54,10 +56,10 @@ package Fierce::Parser;
     sub get_session {
         my ($self) = @_;
         return $self->session;
-    }   
+    }
 
     sub get_node {
-        my ($self, $domain) = @_;
+        my ( $self, $domain ) = @_;
         return $self->session->domainscandetails->get_host_hostname($domain);
     }
 

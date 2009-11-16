@@ -19,7 +19,7 @@ sub fields : Tests {
     is ( $subdomain_bf->starttimestr, 'Tue May 19 15:41:32 2009', 'startscanstr');
     is ( $subdomain_bf->endtime, '1242762099', 'endscan');
     is ( $subdomain_bf->endtimestr, 'Tue May 19 15:41:39 2009', 'endscanstr');
-    is ( $subdomain_bf->elasptime, '7', 'elasp');
+    is ( $subdomain_bf->elapsedtime, '7', 'elasp');
     my @result = @{$subdomain_bf->nodes};
     my $node1 = $result[0];
     my $node2 = $result[1];

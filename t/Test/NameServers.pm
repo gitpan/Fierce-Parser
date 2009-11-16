@@ -20,6 +20,6 @@ sub fields : Tests {
     is ( $ns->starttimestr, 'Wed Sep  3 22:10:03 2008', 'startscanstr');
     is ( $ns->endtime, '1220494203', 'endscan');
     is ( $ns->endtimestr, 'Wed Sep  3 22:10:03 2008', 'endscanstr');
-    is ( $ns->elasptime, '0', 'elasp');
+    is ( $ns->elapsedtime, '0', 'elasp');
 }
 1;

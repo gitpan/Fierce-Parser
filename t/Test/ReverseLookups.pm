@@ -1,5 +1,5 @@
 #!/usr/bin/perl
-# $Id: ReverseLookups.pm 14 2009-03-02 01:04:45Z jabra $
+# $Id: ReverseLookups.pm 297 2009-11-16 04:37:07Z jabra $
 package t::Test::ReverseLookups;
 
 use base 't::Test';
@@ -20,6 +20,6 @@ sub fields : Tests {
     is ( $reverse->starttimestr, 'Wed Sep  3 22:10:03 2008', 'startscanstr');
     is ( $reverse->endtime, '1220494203', 'endscan');
     is ( $reverse->endtimestr, 'Wed Sep  3 22:10:03 2008', 'endscanstr');
-    is ( $reverse->elasptime, '0', 'elasp');
+    is ( $reverse->elapsedtime, '0', 'elasp');
 }
 1;

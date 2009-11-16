@@ -1,5 +1,5 @@
 #!/usr/bin/perl
-# $Id: FindMX.pm 14 2009-03-02 01:04:45Z jabra $
+# $Id: FindMX.pm 297 2009-11-16 04:37:07Z jabra $
 package t::Test::FindMX;
 
 use base 't::Test';
@@ -20,6 +20,6 @@ sub fields : Tests {
     is ( $findmx->starttimestr, 'Wed Sep  3 22:10:03 2008', 'startscanstr');
     is ( $findmx->endtime, '1220494203', 'endscan');
     is ( $findmx->endtimestr, 'Wed Sep  3 22:10:03 2008', 'endscanstr');
-    is ( $findmx->elasptime, '0', 'elasp');
+    is ( $findmx->elapsedtime, '0', 'elasp');
 }
 1;

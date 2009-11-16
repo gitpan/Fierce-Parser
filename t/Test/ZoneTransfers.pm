@@ -20,6 +20,6 @@ sub fields : Tests {
     is ( $zt->starttimestr, 'Wed Sep  3 22:10:03 2008', 'startscanstr');
     is ( $zt->endtime, '1220494203', 'endscan');
     is ( $zt->endtimestr, 'Wed Sep  3 22:10:03 2008', 'endscanstr');
-    is ( $zt->elasptime, '0', 'elasp');
+    is ( $zt->elapsedtime, '0', 'elasp');
 }
 1;
