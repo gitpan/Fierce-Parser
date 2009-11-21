@@ -10,6 +10,9 @@ WriteMakefile(
     VERSION_FROM        => 'lib/Fierce/Parser.pm',
     ABSTRACT_FROM       => 'lib/Fierce/Parser.pod',
     PREREQ_PM           => {
+                'Sub::Uplevel'       => '0.18',
+                'XML::NamespaceSupport' => '1.07',
+                'XML::SAX' => '0.11',
                 'Test::More'        => '0',
                 'Test::Class'        => '0',
                 'Object::InsideOut' => '0',
